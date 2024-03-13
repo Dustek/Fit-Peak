@@ -1,4 +1,7 @@
 import React from 'react';
+ 
+import Navbar from 'navbar.jsx'
+
 import Card from './card.jsx'
 import DetailedInformation from './detailedinfo.jsx';
 
@@ -15,6 +18,7 @@ function App() {
 
     return (
         <div>
+            <Navbar></Navbar>
             <h1>Placeholder</h1>
             <Card data={cardData} />
             <DetailedInformation data={cardData} />
