@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './card.jsx'
+import DetailedInformation from './detailedinfo.jsx';
 
 function App() {
 // dummy data for card - to be replaced from info from API
@@ -16,6 +17,7 @@ function App() {
         <div>
             <h1>Placeholder</h1>
             <Card data={cardData} />
+            <DetailedInformation data={cardData} />
         </div>
     );
 }
