@@ -1,6 +1,6 @@
 import React from 'react';
  
-import Navbar from 'navbar.jsx'
+import Navbar from './Components/Navbar/navbar'
 
 import Card from './card.jsx'
  
