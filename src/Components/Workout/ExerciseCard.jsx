@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router for navigation
-const ExerciseCard = ({ exercise ,muscleImages}) => {
+const ExerciseCard = ({ exercise, muscleImages }) => {
   const { name, type, muscle, equipment, difficulty } = exercise;
+
   const handleClick = () => {
-    // Handle click event to navigate to instruction page
-    // You can use React Router's Link component to navigate
     localStorage.setItem('selectedExercise', name);
   };
+
   return (
     <div className="exercise-card">
       {/* Display muscle image */}
@@ -15,7 +15,9 @@ const ExerciseCard = ({ exercise ,muscleImages}) => {
       <p>Type: {type}</p>
       <p>Equipment: {equipment}</p>
       <p>Difficulty: {difficulty}</p>
-      <Link to={`/instructions/${name}`} onClick={handleClick}>View Instructions</Link>
+      <Link to={`/instructions/${name}`} onClick={handleClick}>
+        View Instructions
+      </Link>
     </div>
   );
 };

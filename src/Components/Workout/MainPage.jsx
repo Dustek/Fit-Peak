@@ -26,12 +26,18 @@ const MainPage = () => {
     const [exercises, setExercises] = useState([]);
   
     useEffect(() => {
-      // Fetch exercises initially (assuming you want to show some exercises by default)
+      // shows initial excercises
       fetchExercises();
     }, []);
   
     const fetchExercises = async (options = {}) => {
       try {
+        // Log the request details before making the API call
+    console.log('API Request URL:', 'https://api.api-ninjas.com/v1/exercises');
+    console.log('API Request Parameters:', {
+      limit: 10,
+      ...options
+    });
         const response = await axios.get('https://api.api-ninjas.com/v1/exercises', {
           params: {
             limit: 10, // Always limit to 10 results
@@ -47,24 +53,22 @@ const MainPage = () => {
       }
     };
   
-    // Callback function to handle search
-    const handleSearch = (options) => {
-      fetchExercises(options);
-    };
-  
-    return (
-      <>
-        {/* Render ExerciseSearchForm component */}
-        <ExerciseSearchForm onSearch={handleSearch} />
-  
-        <div className="main-page">
-          {exercises.map((exercise, index) => (
-            <ExerciseCard key={index} exercise={exercise} muscleImages={muscleImages} />
-          ))}
-        </div>
-        <Link to="/store">Go to Store</Link>
-      </>
-    );
+  // Callback function to handle search
+  const handleSearch = (options) => {
+    fetchExercises(options);
   };
-  
-  export default MainPage;
+
+  return (
+    <>
+      <ExerciseSearchForm onSearch={handleSearch} />
+      <div className="main-page">
+        {exercises.map((exercise, index) => (
+          <ExerciseCard key={index} exercise={exercise} muscleImages={muscleImages} />
+        ))}
+      </div>
+      <Link to="/store">Go to Store</Link>
+    </>
+  );
+};
+
+export default MainPage;
