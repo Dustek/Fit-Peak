@@ -4,6 +4,8 @@ import Navbar from './Components/Navbar/navbar.jsx'
 import ExerciseCard from './Components/Workout/ExerciseCard.jsx'
 import InstructionPage from './Components/Workout/InstructionPage.jsx'
 import MainPage from './Components/Workout/MainPage.jsx'
+import "./App.css";
+
 function App() {
    return (
     <div>
