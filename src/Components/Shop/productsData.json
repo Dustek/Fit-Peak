@@ -1,0 +1,63 @@
+[
+    {
+      "name": "Dumbell",
+      "description": "Description of Product 1",
+      "price": 10.99,
+     "image": "barbell.jpeg"
+    },
+    {
+      "name": "Barbell",
+      "description": "Description of Product 2",
+      "price": 15.99,
+      "image": "dumbbell.jpeg"
+    },
+    {
+      "name": "Kettlebell",
+      "description": "Description of Product 3",
+      "price": 20.99,
+      "image": "kettlebell.jpeg"
+    },
+    {
+      "name": "Weight plate",
+      "description": "Description of Product 4",
+      "price": 25.99,
+      "image": "weightplate.jpeg"
+    },
+    {
+      "name": "Resistance band",
+      "description": "Description of Product 5",
+      "price": 30.99,
+      "image": "resistanceband.jpeg"
+    },
+    {
+      "name": "Medicine ball",
+      "description": "Description of Product 6",
+      "price": 35.99,
+      "image": "medicineball.jpeg"
+    },
+    {
+      "name": "Jump rope",
+      "description": "Description of Product 7",
+      "price": 40.99,
+      "image": "jumprope.jpeg"
+    },
+    {
+      "name": "Yoga mat",
+      "description": "Description of Product 8",
+      "price": 45.99,
+      "image": "yogamat.jpeg"
+    },
+    {
+      "name": "Foam roller",
+      "description": "Description of Product 9",
+      "price": 50.99,
+      "image": "foamroller.jpeg"
+    },
+    {
+      "name": "Balance ball",
+      "description": "Description of Product 10",
+      "price": 55.99,
+      "image": "balanceball.jpeg"
+    }
+
+  ]
