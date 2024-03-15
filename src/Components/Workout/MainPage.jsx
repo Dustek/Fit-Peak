@@ -2,20 +2,21 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ExerciseCard from './ExerciseCard';
+
 const muscleImages = {
   biceps: 'bicep.jpeg',
   // Add other muscle images as needed
 };
+
 const MainPage = () => {
   const [exercises, setExercises] = useState([]);
-  const [selectedMuscle, setSelectedMuscle] = useState('');
-  const [selectedType, setSelectedType] = useState('');
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
-  const handleSearch = async () => {
+
+  const handleSearch = async (difficulty) => {
     try {
       const response = await axios.get('https://api.api-ninjas.com/v1/exercises', {
         params: {
-          difficulty: selectedDifficulty
+          difficulty: difficulty
         },
         headers: {
           'X-Api-Key': 'mgS819STNx1KpuKbeAkddCtzAHrj9WgTMEsAwevC'
@@ -26,20 +27,16 @@ const MainPage = () => {
       console.error('Request failed:', error);
     }
   };
+
   return (
     <>
       <div className="filter-options">
         <label>
           Difficulty Level:
-          <select value={selectedDifficulty} onChange={(e) => setSelectedDifficulty(e.target.value)}>
-            <option value="">Select Difficulty Level</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="Expert">Expert</option>
-            {/* Options for difficulty levels */}
-          </select>
+          <button onClick={() => handleSearch('beginner')}>Beginner</button>
+          <button onClick={() => handleSearch('intermediate')}>Intermediate</button>
+          <button onClick={() => handleSearch('expert')}>Expert</button>
         </label>
-        <button onClick={handleSearch}>Search</button>
       </div>
       <div className="main-page">
         {/* Display filtered exercises */}
@@ -51,4 +48,5 @@ const MainPage = () => {
     </>
   );
 };
+
 export default MainPage;
