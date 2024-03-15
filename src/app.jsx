@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import Navbar from "./Components/Navbar/navbar.jsx";
 import ExerciseCard from "./Components/Workout/ExerciseCard.jsx";
 import InstructionPage from "./Components/Workout/InstructionPage.jsx";
-import Favourites from "./Components/Workout/favourites.jsx";
+import Favourites from "./Components/Workout/Favourites.jsx";
 import MainPage from "./Components/Workout/MainPage.jsx";
 import Shop from "./Components/Shop/Shop.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
@@ -22,6 +22,7 @@ function App() {
               path="/instructions/:exerciseName"
               element={<InstructionPage />}
             />
+            <Route path="/Favourites" element={<Favourites />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Contact" element={<Contact />} />
