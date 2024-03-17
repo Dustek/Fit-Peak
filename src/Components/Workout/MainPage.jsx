@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ExerciseCard from './ExerciseCard';
+import './MainPage.css'; // Import CSS file
 
 const muscleImages = {
   biceps: 'bicep.jpeg',
@@ -38,10 +39,11 @@ const MainPage = () => {
           <button onClick={() => handleSearch('expert')}>Expert</button>
         </label>
       </div>
-      <div className="main-page">
-        {/* Display filtered exercises */}
+      <div className="exercise-card-container">
         {exercises.map((exercise, index) => (
-          <ExerciseCard key={index} exercise={exercise} muscleImages={muscleImages} />
+          <div key={index}>
+            <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
+          </div>
         ))}
       </div>
       <Link to="/store">Go to Store</Link>

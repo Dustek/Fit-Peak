@@ -1,0 +1,55 @@
+/* Container for exercise cards */
+.exercise-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 200px;
+  padding: 20px;
+}
+
+/* Individual exercise card */
+.exercise-card {
+  background-color: #fff;
+  border: 1px solid #3490dc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.exercise-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.exercise-details {
+  flex-grow: 1;
+}
+
+.exercise-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.exercise-info {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exercise-label {
+  font-weight: 600;
+}
+
+.view-instructions-link {
+  background-color: #3490dc;
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.view-instructions-link:hover {
+  background-color: #2779bd;
+}

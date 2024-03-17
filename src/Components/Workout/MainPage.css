@@ -1,0 +1,9 @@
+.filter-options {
+    margin-bottom: 20px;
+  }
+  
+  .exercise-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
