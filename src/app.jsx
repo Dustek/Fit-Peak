@@ -9,6 +9,7 @@ import Shop from "./Components/Shop/Shop.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import Checkout from "./Components/Shop/Checkout.jsx";
 import "./App.css";
+import Footer from './Components/Footer/Footer.jsx'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+     <Footer/>
     </div>
   );
 }
