@@ -25,6 +25,7 @@ function App() {
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Contact" element={<Contact />} />
+            <Route path="/Favourites" element={<Favourites />} />
             {/* Set the default route to Exercise page */}
             <Route index element={<MainPage />} />
           </Routes>
