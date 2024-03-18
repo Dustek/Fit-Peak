@@ -17,59 +17,58 @@ const Button = styled.button`
   margin: 0 auto;
   border: none;
   font-size: 20px;
-  background-color: #9b5de5;
+  background-color: green;
   color: white;
-
   transition: all 0.5s;
- border-radius: 100%;
- 
+  border-radius: 100%;
+
   &:hover {
-    background-color: #ffc300;
+    background-color: green;
     color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border: 3px solid black;
   }
 `;
 
-
-
 const Button2 = styled.button`
-width: 200px;
-height: 200px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
   margin: 0 auto;
   border: none;
   font-size: 20px;
   border-radius: 100%;
-
- background-color: #f15bb5;
- 
+  background-color: blue;
   transition: all 0.5s;
   color: white;
- 
-  &:hover {
-    background-color: #ffc300;
-    color: white;
-  }
 
+  &:hover {
+    background-color: blue;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border: 3px solid black;
+  }
 `;
 
 const Button3 = styled.button`
-width: 200px;
-height: 200px;
+  width: 200px;
+  height: 200px;
   border-radius: 5px;
   margin: 0 auto;
   border: none;
   font-size: 20px;
-  background-color: #fee440;
+  background-color: red;
   color: white;
   border-radius: 100%;
-
   transition: all 0.5s;
- 
+
   &:hover {
-    background-color: #ffc300;
+    background-color: red;
     color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border: 3px solid black;
   }
-  `;
+`;
 
 const Buttondiv = styled.div`
   display: flex;
@@ -147,6 +146,7 @@ const muscleImages = {
 const MainPage = () => {
   const [exercises, setExercises] = useState([]);
   const [selectedDifficulty, setSelectedDifficulty] = useState('');
+  
 
   const handleSearch = async (difficulty) => {
     try {
@@ -179,7 +179,7 @@ const MainPage = () => {
       </div>
       <div className="exercise-card-container">
         {/* mapping the cards */}
-        {/* excersise card is excesise.jsx component/card */}
+        {/* excersise card is excercise.jsx component/card */}
         {exercises.map((exercise, index) => (
           <div key={index}>
             <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
