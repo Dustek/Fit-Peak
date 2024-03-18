@@ -125,7 +125,16 @@ const Linki= styled(Link)`
 
 
 const muscleImages = {
-  biceps: 'bicep.jpeg',
+  biceps: './biceps.jpeg',
+  quadriceps: './quardicep.jpeg',
+  lower_back: './lower-back.jpeg',
+  forearms: './forearms.jpeg',
+  hamstrings: './hamstrings.jpeg',
+  abdominals: './abdominals.jpeg',
+  lats: './lats.jpeg',
+  shoulders: './shoulders.jpeg',
+  middle_back: './middle-back.jpeg',
+  glutes: './glutes.jpeg',
   // Add other muscle images as needed
 };
 
