@@ -137,6 +137,20 @@ const muscleImages = {
   // Add other muscle images as needed
 };
 
+const getCardClassName = (difficulty) => {
+  switch (difficulty) {
+    case 'beginner':
+      return 'green-card';
+    case 'intermediate':
+      return 'blue-card';
+    case 'expert':
+      return 'red-card';
+    default:
+      return '';
+  }
+};
+
+
 //here we are using the useState hook to get the data from the API
 //setExercises is a function that updates the exercises data from the API
 // excerises is an array of objects, each object is an exercise with a name, description, and difficulty
@@ -181,10 +195,10 @@ const MainPage = () => {
           {/* mapping the cards */}
           {/* excersise card is excercise.jsx component/card */}
           {exercises.map((exercise, index) => (
-            <div key={index}>
-              <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
-            </div>
-          ))}
+  <div key={index} className={getCardClassName(exercise.difficulty)}>
+    <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
+  </div>
+))}
         </div>
         <Linki to="/Shop">Visit Our Store Page </Linki>
       </Main>

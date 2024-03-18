@@ -1,29 +1,35 @@
 /* Container for exercise cards */
 .exercise-card-container {
-
   display: grid;
   grid-template-columns: repeat(3, 0.8fr);
   gap: 100px;
   padding: 120px;
-
-
- 
-  
 }
 
-
 /* Individual exercise card */
- .exercise-card {
-  background-color: #b8c0ff;
- border: 1px solid #3490dc;
+.exercise-card {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-padding: 20px;
-box-shadow: 0 8px 6px -6px black;
+  padding: 20px;
+}
 
+/* Green exercise card */
+.green-card {
+  background-color: #80ff80;
+  border: 1px solid #008000;
+}
 
+/* Blue exercise card */
+.blue-card {
+  background-color: #80bfff;
+  border: 1px solid #0000ff;
+}
 
-} 
+/* Red exercise card */
+.red-card {
+  background-color: #ff8080;
+  border: 1px solid #800000;
+}
 
 .exercise-image {
   width: 100%;
@@ -61,7 +67,6 @@ box-shadow: 0 8px 6px -6px black;
 }
 
 .view-instructions-link:hover {
-  background-color: #cdb4db;
-  scale:0.8
-  
+  background-color: #03910f;
+  scale: 1.1;
 }
