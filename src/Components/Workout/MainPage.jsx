@@ -2,12 +2,126 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ExerciseCard from './ExerciseCard';
-import './MainPage.css'; // Import CSS file
+import './MainPage.css'; 
+import styled from 'styled-components';
 
 //this page is the main page of the workout section
 //it will display the data from Ninjas API
 //it will display the data in the form of cards
 //card is ExcerciseCard.jsx
+
+const Button = styled.button`
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: none;
+  font-size: 30px;
+  background-color: #9b5de5;
+  color: white;
+
+  transition: all 0.5s;
+ border-radius: 100%;
+ 
+  &:hover {
+    background-color: #ffc300;
+    color: white;
+  }
+`;
+
+
+
+const Button2 = styled.button`
+width: 200px;
+height: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: none;
+  font-size: 30px;
+  border-radius: 100%;
+
+ background-color: #f15bb5;
+ 
+  transition: all 0.5s;
+  color: white;
+ 
+  &:hover {
+    background-color: #ffc300;
+    color: white;
+  }
+
+`;
+
+const Button3 = styled.button`
+width: 200px;
+height: 200px;
+  border-radius: 5px;
+  margin: 0 auto;
+  border: none;
+  font-size: 30px;
+  background-color: #fee440;
+  color: white;
+  border-radius: 100%;
+
+  transition: all 0.5s;
+ 
+  &:hover {
+    background-color: #ffc300;
+    color: white;
+  }
+  `;
+
+const Buttondiv = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const Divi = styled.div`
+  width: 220px;
+  height: 220px;
+  padding: 20px;
+border-radius: 100%;
+  border: 2px solid #9b5de5;
+  margin: 20px; 
+
+  &:hover {
+    border: 2px solid #ffc300;
+  }
+`;
+
+const Main = styled.div`
+width: 100vw;
+
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+
+`;
+
+const Linki= styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffc300;
+  border-radius: 5px;
+  transition: all 0.5s;
+  &:hover {
+    background-color: #9b5de5;
+    color: white;
+  }
+`;
+
+
+
 
 
 const muscleImages = {
@@ -43,13 +157,15 @@ const MainPage = () => {
 
   return (
     <>
+    <Main>
       <div className="filter-options">
         <label>
           {/* Difficulty Level:three buttons for 3 levels of difficulties */}
-
-          <button onClick={() => handleSearch('beginner')}>Beginner</button>
-          <button onClick={() => handleSearch('intermediate')}>Intermediate</button>
-          <button onClick={() => handleSearch('expert')}>Expert</button>
+          <Buttondiv> 
+          <Divi><Button onClick={() => handleSearch('beginner')} className='one'> Beginner</Button></Divi>
+          <Divi><Button2 onClick={() => handleSearch('intermediate')}>Intermediate</Button2></Divi>
+          <Divi><Button3 onClick={() => handleSearch('expert')}>Expert</Button3></Divi>
+         </Buttondiv>
         </label>
       </div>
       <div className="exercise-card-container">
@@ -61,7 +177,8 @@ const MainPage = () => {
           </div>
         ))}
       </div>
-      <Link to="/store">Go to Store</Link>
+      <Linki to="/Shop">Visit Our Store Page </Linki>
+      </Main>
     </>
   );
 };
