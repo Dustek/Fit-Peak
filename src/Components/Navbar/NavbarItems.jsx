@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import './navbar.css'
 
 const Navbar = ({ isToggled }) => {
   const items = ["Home", "Exercise", "Shop", "About"];
@@ -50,7 +51,7 @@ const Navbar = ({ isToggled }) => {
       >
         {items.map(item => (
           <motion.li className="nav-item" variants={navItem} key={item}>
-            <Link to={"/" + item.toLowerCase()}>{/* Link to respective pages */}
+            <Link to={"/" + item.toLowerCase()} style={{ textDecoration: 'none' }}>{/* Link to respective pages */}
               <p>{item}</p>
             </Link>
           </motion.li>
