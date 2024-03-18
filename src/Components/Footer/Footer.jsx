@@ -2,7 +2,9 @@ import React from "react"
 import { MDBIcon } from 'mdb-react-ui-kit';
 
 const Footer = () => 
-<footer className="footer text-center font-small" style={{width: '100%'}}>
+<div id="page-container">
+<div id="content-wrap">
+<footer className="footer--pin fixed-bottom text-center font-small" style={{width: '100%'}}>
   <div className="container p-4 pb-0">
       <div className="container-fluid">
         <div className="mb-4">
@@ -24,10 +26,11 @@ const Footer = () =>
         </div>
     </div>
   </div>
-  <div className="footer-copyright text-center py-3">© 2024 Copyright:
+  <div className="footer-copyright text-center py-3" style={{color: "black"}}>© 2024 Copyright:
     <a href="/" style = {{ color: "rgba(26, 225, 232)", textDecoration: 'none'}}> TEAM 18</a>
   </div>
 </footer>
-
+</div>
+</div>
 
 export default Footer
