@@ -14,9 +14,10 @@ const ExerciseCard = ({ exercise, muscleImages }) => {
   };
 
   return (
+ 
     <div className="exercise-card">
       {/* muscleImages[muscle] means obj{key}  */}
-    <img className="exercise-image" src={muscleImages[muscle]} alt={muscle} />
+    <img className="exercise-image" src={muscleImages[muscle]} alt={muscle}  style={{width:'300px',height:'200px'}}/>
     <div className="exercise-details">
       <h2 className="exercise-name">{name}</h2>
       <p className="exercise-info">
@@ -29,6 +30,7 @@ const ExerciseCard = ({ exercise, muscleImages }) => {
         <span className="exercise-label">Difficulty:</span> {difficulty}
       </p>
     </div>
+    
     <Link
       to={`/instructions/${name}`}
       onClick={handleClick}
@@ -37,6 +39,7 @@ const ExerciseCard = ({ exercise, muscleImages }) => {
       View Instructions
     </Link>
   </div>
+
 );
 };
 
