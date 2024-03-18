@@ -3,8 +3,9 @@
 
 html {
   font-family: "Inter";
-  width: 550px;
-  height: 750px;
+  /* width: 550px; 
+  height: 750px;  */
+ 
 }
 
 .btn {
@@ -18,10 +19,11 @@ html {
 }
 
 .navbar {
-  width: 700px;
-  height: 50px;
+  width: 100vw; 
+   /* width: 700px;  */
+  height: 100px;
   margin: none;
-  border-radius: 16px;
+  /* border-radius: 16px; */
   /*background-color: turquoise;*/
   background: linear-gradient(to top, #3ac9ec, #6bdfb9);
 }
