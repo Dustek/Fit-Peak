@@ -145,10 +145,9 @@ const muscleImages = {
 //axios is fetching the data from the API its intslled using npm install axios
 const MainPage = () => {
   const [exercises, setExercises] = useState([]);
-  const [selectedDifficulty, setSelectedDifficulty] = useState('');
-  
+  const [containerColor, setContainerColor] = useState(''); // Initial color
 
-  const handleSearch = async (difficulty) => {
+  const handleSearch = async (difficulty, color) => {
     try {
       const response = await axios.get('https://api.api-ninjas.com/v1/exercises', {
         params: {
@@ -159,6 +158,7 @@ const MainPage = () => {
         }
       });
       setExercises(response.data);
+      setContainerColor(color); // This sets the container colour based on button clicked
     } catch (error) {
       console.error('Request failed:', error);
     }
@@ -166,27 +166,27 @@ const MainPage = () => {
 
   return (
     <>
-    <Main>
-      <div className="filter-options">
-        <label>
-          {/* Difficulty Level:three buttons for 3 levels of difficulties */}
-          <Buttondiv> 
-          <Divi><Button onClick={() => handleSearch('beginner')} className='one'>Click for Beginner Level Exercises</Button></Divi>
-          <Divi><Button2 onClick={() => handleSearch('intermediate')}>Click for Intermediate Level Exercises</Button2></Divi>
-          <Divi><Button3 onClick={() => handleSearch('expert')}>Click for Expert Level Exercises</Button3></Divi>
-         </Buttondiv>
-        </label>
-      </div>
-      <div className="exercise-card-container">
-        {/* mapping the cards */}
-        {/* excersise card is excercise.jsx component/card */}
-        {exercises.map((exercise, index) => (
-          <div key={index}>
-            <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
-          </div>
-        ))}
-      </div>
-      <Linki to="/Shop">Visit Our Store Page </Linki>
+      <Main style={{ backgroundColor: containerColor }}>
+        <div className="filter-options">
+          <label>
+            {/* Difficulty Level:three buttons for 3 levels of difficulties */}
+            <Buttondiv> 
+              <Divi><Button onClick={() => handleSearch('beginner', '#dcffde')}>Click for Beginner Level Exercises</Button></Divi>
+              <Divi><Button2 onClick={() => handleSearch('intermediate', '#dcddff')}>Click for Intermediate Level Exercises</Button2></Divi>
+              <Divi><Button3 onClick={() => handleSearch('expert', '#ffc7c7')}>Click for Expert Level Exercises</Button3></Divi>
+            </Buttondiv>
+          </label>
+        </div>
+        <div className="exercise-card-container">
+          {/* mapping the cards */}
+          {/* excersise card is excercise.jsx component/card */}
+          {exercises.map((exercise, index) => (
+            <div key={index}>
+              <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
+            </div>
+          ))}
+        </div>
+        <Linki to="/Shop">Visit Our Store Page </Linki>
       </Main>
     </>
   );
