@@ -16,7 +16,7 @@ const Button = styled.button`
   border-radius: 5px;
   margin: 0 auto;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #9b5de5;
   color: white;
 
@@ -37,7 +37,7 @@ height: 200px;
   border-radius: 5px;
   margin: 0 auto;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   border-radius: 100%;
 
  background-color: #f15bb5;
@@ -58,7 +58,7 @@ height: 200px;
   border-radius: 5px;
   margin: 0 auto;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   background-color: #fee440;
   color: white;
   border-radius: 100%;
@@ -171,9 +171,9 @@ const MainPage = () => {
         <label>
           {/* Difficulty Level:three buttons for 3 levels of difficulties */}
           <Buttondiv> 
-          <Divi><Button onClick={() => handleSearch('beginner')} className='one'> Beginner</Button></Divi>
-          <Divi><Button2 onClick={() => handleSearch('intermediate')}>Intermediate</Button2></Divi>
-          <Divi><Button3 onClick={() => handleSearch('expert')}>Expert</Button3></Divi>
+          <Divi><Button onClick={() => handleSearch('beginner')} className='one'>Click for Beginner Level Exercises</Button></Divi>
+          <Divi><Button2 onClick={() => handleSearch('intermediate')}>Click for Intermediate Level Exercises</Button2></Divi>
+          <Divi><Button3 onClick={() => handleSearch('expert')}>Click for Expert Level Exercises</Button3></Divi>
          </Buttondiv>
         </label>
       </div>
