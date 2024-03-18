@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import './InstructionPage.css';
+
+
+
+
 // Assuming you have a directory of muscle images
 const InstructionPage = () => {
   const { exerciseName } = useParams();
@@ -24,22 +29,27 @@ const InstructionPage = () => {
   //const storedExerciseName = localStorage.getItem('selectedExercise');
   // Mapping of exercise names to video file paths
   const videoPaths = {
-    'Incline Hammer Curls': '/incline.mp4',
-    'Wide-grip barbell curl': '/incline.mp4',
-    'EZ-bar spider curl': '/incline.mp4',
-    'Hammer Curls ': '/incline.mp4',
-    'EZ-Bar Curl': '/incline.mp4',
-    'Zottman Curl': '/incline.mp4',
-    'Biceps curl to shoulder press': '/incline.mp4',
-    'Barbell Curl': '/incline.mp4',
-    'Concentration curl': '/incline.mp4',
-    'Flexor Incline Dumbbell Curls': '/incline.mp4',
+    'Rickshaw Carry': '/beg1.mp4',
+    'Power snatch-': '/Power snatch.mp4',
+    'Single-Leg Press': '/Single-Leg Press.mp4',
+    'Clean from Blocks': '/block.mp4',
+    'Incline Hammer Curls ': '/hammercurl.mp4',
+    'Barbell deficit deadlift': '/barbell.mp4',
+    'Romanian Deadlift With Dumbbells': '/dumbell.mp4',
+    'Clean Deadlift': '/barbell.mp4',
+    'Landmine twist': '/bb.mp4',
+    'Weighted pull-up': '/bb.mp4',
+    'Power snatch-': '//beg1.mp4',
+    'Narrow-stance squat': '/squat.mp4',
+    'Barbell forward lunge': '/barbell.mp4.mp4',
     // Add more exercise names and corresponding video file paths as needed
   };
   return (
     <div className="instruction-page">
       {exercise ? (
+
         <>
+        <div className="main">
           <h2>{exercise.name}</h2>
           <p>Type: {exercise.type}</p>
           <p>Equipment: {exercise.equipment}</p>
@@ -56,11 +66,13 @@ const InstructionPage = () => {
             <h3>Instructions:</h3>
             <p>{exercise.instructions}</p>
           </div>
+          </div>
         </>
       ) : (
         <p>Loading...</p>
       )}
     </div>
+ 
   );
 };
 export default InstructionPage;
