@@ -1,2 +1,22 @@
 
-
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: #8ef4f693;
+    color: #eee;
+}
+  .footer--pin {
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  #content-wrap {
+    padding-bottom: 1.5rem;    /* Footer height */
+  }
+  #page-container {
+    position: relative;
+    min-height: 50vh;
+  }
+  
