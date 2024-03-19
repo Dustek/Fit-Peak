@@ -171,6 +171,7 @@ const MainPage = () => {
           'X-Api-Key': 'mgS819STNx1KpuKbeAkddCtzAHrj9WgTMEsAwevC'
         }
       });
+      console.log(response.data)
       setExercises(response.data);
       setContainerColor(color); // This sets the container colour based on button clicked
     } catch (error) {
