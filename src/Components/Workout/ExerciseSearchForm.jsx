@@ -9,7 +9,6 @@ const ExerciseSearchForm = ({ onSearch }) => {
 
   const handleSearch = async () => {
     console.log('Selected Options:', { muscle, equipment, type, difficulty });
-    // Perform API call with selected options
     try {
       const response = await axios.get('https://api.api-ninjas.com/v1/exercises', {
         params: {

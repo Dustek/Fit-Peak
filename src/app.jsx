@@ -9,7 +9,8 @@ import Shop from "./Components/Shop/Shop.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import Checkout from "./Components/Shop/Checkout.jsx";
 import "./App.css";
-import Footer from './Components/Footer/Footer.jsx'
+import Footer from "./Components/Footer/Footer.jsx";
+import Hero from "./Components/Hero/hero.jsx";
 
 function App() {
   return (
@@ -27,13 +28,13 @@ function App() {
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Checkout" element={<Checkout />} />
             <Route path="/Contact" element={<Contact />} />
-            <Route path="/Favourites" element={<Favourites />} />
             {/* Set the default route to Exercise page */}
             <Route index element={<MainPage />} />
+            <Route path="/hero" element={<Hero />} />
           </Routes>
         </div>
       </Router>
-     <Footer/>
+      <Footer />
     </div>
   );
 }

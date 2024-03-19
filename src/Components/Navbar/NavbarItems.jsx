@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import './navbar.css'
 
 const Navbar = ({ isToggled }) => {
-  const items = ["Home", "Exercise", "Shop", "About"];
+  const items = ["Home", "Exercise", "Shop", "Contact"];
 
   const navList = {
     visible: {
