@@ -3,13 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Im
 import Navbar from "./Components/Navbar/navbar.jsx";
 import ExerciseCard from "./Components/Workout/ExerciseCard.jsx";
 import InstructionPage from "./Components/Workout/InstructionPage.jsx";
-import Favourites from "./Components/Workout/Favourites.jsx";
+import Favourites from "./Components/Workout/favourites.jsx";
 import MainPage from "./Components/Workout/MainPage.jsx";
 import Shop from "./Components/Shop/Shop.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import Checkout from "./Components/Shop/Checkout.jsx";
 import "./App.css";
-import Footer from './Components/Footer/Footer.jsx'
+import Footer from "./Components/Footer/Footer.jsx";
+import Hero from "./Components/Hero/hero.jsx";
 
 function App() {
   return (
@@ -29,10 +30,11 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             {/* Set the default route to Exercise page */}
             <Route index element={<MainPage />} />
+            <Route path="/hero" element={<Hero />} />
           </Routes>
         </div>
       </Router>
-     <Footer/>
+      <Footer />
     </div>
   );
 }

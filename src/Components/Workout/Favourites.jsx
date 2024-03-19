@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from "jquery";
 
 const Favourites = () => {
   return <h1>Favourites</h1>;
