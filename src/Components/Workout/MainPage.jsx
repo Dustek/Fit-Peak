@@ -27,7 +27,6 @@ const Button = styled.button`
     background-color: #85b473;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-   
   }
 `;
 
@@ -47,7 +46,6 @@ const Button2 = styled.button`
     background-color: #ee9d65;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-
   }
 `;
 
@@ -67,7 +65,6 @@ const Button3 = styled.button`
     background-color: #d84243;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-  
   }
 `;
 
@@ -135,17 +132,16 @@ const muscleImages = {
 
 const getCardClassName = (difficulty) => {
   switch (difficulty) {
-    case 'beginner':
-      return 'green-card';
-    case 'intermediate':
-      return 'blue-card';
-    case 'expert':
-      return 'red-card';
+    case "beginner":
+      return "green-card";
+    case "intermediate":
+      return "blue-card";
+    case "expert":
+      return "red-card";
     default:
-      return '';
+      return "";
   }
 };
-
 
 //here we are using the useState hook to get the data from the API
 //setExercises is a function that updates the exercises data from the API
@@ -169,8 +165,8 @@ const MainPage = () => {
             "X-Api-Key": "mgS819STNx1KpuKbeAkddCtzAHrj9WgTMEsAwevC",
           },
         }
-      });
-      console.log(response.data)
+      );
+      console.log(response.data);
       setExercises(response.data);
       setContainerColor(color); // This sets the container colour based on button clicked
     } catch (error) {
@@ -221,15 +217,14 @@ const MainPage = () => {
           {/* mapping the cards */}
           {/* excersise card is excercise.jsx component/card */}
           {exercises.map((exercise, index) => (
-  <div key={index} className={getCardClassName(exercise.difficulty)}>
-    <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
-  </div>
-))}
+            <div key={index} className={getCardClassName(exercise.difficulty)}>
+              <ExerciseCard exercise={exercise} muscleImages={muscleImages} />
+            </div>
+          ))}
         </div>
         <Linki to="/Shop">Visit Our Store Page </Linki>
       </Main>
     </>
   );
 };
-
 export default MainPage;
