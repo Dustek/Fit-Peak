@@ -30,7 +30,7 @@ const InstructionPage = () => {
   // Mapping of exercise names to video file paths
   const videoPaths = {
     'Rickshaw Carry': '/beg1.mp4',
-    'Power snatch-': '/Power snatch.mp4',
+    
     'Single-Leg Press': '/Single-Leg Press.mp4',
     'Clean from Blocks': '/block.mp4',
     'Incline Hammer Curls ': '/hammercurl.mp4',
@@ -39,7 +39,7 @@ const InstructionPage = () => {
     'Clean Deadlift': '/barbell.mp4',
     'Landmine twist': '/bb.mp4',
     'Weighted pull-up': '/bb.mp4',
-    'Power snatch-': '//beg1.mp4',
+    'Power snatch-': '/beg1.mp4',
     'Narrow-stance squat': '/squat.mp4',
     'Barbell forward lunge': '/barbell.mp4.mp4',
     // Add more exercise names and corresponding video file paths as needed
