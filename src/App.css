@@ -2,10 +2,11 @@
 footer {
     position: sticky !important;
     bottom: 0;
+    padding: 14px;
     width: 100%;
-    padding: 10px;
     background: #8ef4f693;
     color: #eee;
+    margin-top: 50px;
 }
 
 .footer-copyright {
