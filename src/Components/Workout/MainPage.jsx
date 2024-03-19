@@ -26,7 +26,7 @@ const Button = styled.button`
     background-color: green;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    border: 3px solid black;
+   
   }
 `;
 
@@ -46,7 +46,7 @@ const Button2 = styled.button`
     background-color: blue;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    border: 3px solid black;
+
   }
 `;
 
@@ -66,7 +66,7 @@ const Button3 = styled.button`
     background-color: red;
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1);
-    border: 3px solid black;
+  
   }
 `;
 
