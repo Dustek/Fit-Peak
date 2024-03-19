@@ -180,7 +180,7 @@ const MainPage = () => {
 
   return (
     <>
-      <Main style={{ backgroundColor: containerColor }}>
+      <Main>
         <div className="filter-options">
           <label>
             {/* Difficulty Level:three buttons for 3 levels of difficulties */}
