@@ -3,11 +3,39 @@
     display: flex;
     flex-direction: column;
 }
+.equipment-icon {
+    margin-left: 5px;
+    font-size: 24px;
+  }
+  .instructions {
+    /* Your existing styles */
+  }
+  
+  .instructions p {
+    /* Your existing paragraph styles */
+  }
+  
+  .instructions button {
+    color: blue; /* Set the color to blue */
+    text-decoration: underline; /* Underline the text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .instructions button:hover {
+    text-decoration: none; /* Remove underline on hover */
+  }
 
-@media screen and (max-width: 600px){
+
+
+
+
+  @media screen and (max-width: 600px){
     .main{
         display: flex;
         flex-direction: column;
-    }
-    
+    } 
 }

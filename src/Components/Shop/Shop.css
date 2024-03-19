@@ -43,7 +43,7 @@
    
   }
 
-  .but{
+  .but {
     background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
@@ -53,6 +53,8 @@
     font-size: 20px;
     border: none;
     border-radius: 10px;
+    width: auto;
+    max-width: 200px;
   }
   .but:hover{
     background-color: #3b6fd8;
