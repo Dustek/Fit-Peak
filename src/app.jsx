@@ -11,27 +11,32 @@ import Checkout from "./Components/Shop/Checkout.jsx";
 import "./App.css";
 import Footer from "./Components/Footer/Footer.jsx";
 import Hero from "./Components/Hero/hero.jsx";
+import Home from "./Components/Home/Home.jsx";
 
 function App() {
   return (
     <div>
       <Router>
         <div className="App">
+       
           <Navbar />
+          {/* <Route  path="/Home" element={<Home />} /> */}
+     
+           
           <Routes>
-            <Route path="/Exercise" element={<MainPage />} />
-            <Route
-              path="/instructions/:exerciseName"
-              element={<InstructionPage />}
-            />
-            <Route path="/Favourites" element={<Favourites />} />
-            <Route path="/Shop" element={<Shop />} />
-            <Route path="/Checkout" element={<Checkout />} />
-            <Route path="/Contact" element={<Contact />} />
-            {/* Set the default route to Exercise page */}
-            <Route index element={<MainPage />} />
-            <Route path="/hero" element={<Hero />} />
-          </Routes>
+  <Route index element={<Home />} />
+  <Route path="/Home" element={<Home />} />
+  <Route path="/Exercise" element={<MainPage />} />
+  <Route path="/instructions/:exerciseName" element={<InstructionPage />} />
+  <Route path="/Shop" element={<Shop />} />
+  <Route path="/Checkout" element={<Checkout />} />
+  <Route path="/Contact" element={<Contact />} />
+  <Route path="/hero" element={<Hero />} />
+</Routes>
+
+
+
+       
         </div>
       </Router>
       <Footer />
