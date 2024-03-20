@@ -11,18 +11,20 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+
 }
 
 /* Green exercise card */
 .green-card {
   background-color: #80ff80;
+ 
   border: 1px solid #008000;
 }
 
 /* Blue exercise card */
 .blue-card {
   background-color: #80bfff;
-  border: 1px solid #0000ff;
+  /* border: 1px solid #0000ff; */
 }
 
 /* Red exercise card */

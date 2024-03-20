@@ -1,13 +1,11 @@
-import React,{useState} from "react";
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-
 const Home = () => {
-
-    const recentSearch = localStorage.getItem('selectedExercise');
+  const recentSearch = localStorage.getItem('selectedExercise');
   return (
     <div>
       <div className="mainbanner">
@@ -18,26 +16,17 @@ const Home = () => {
         </div>
         </div>
         <div className="mainbanner2"></div>
-
-
         <div>
-
-     
-      {/* Display the recent search if it exists */}
-      {recentSearch && (
-        <div>
-          <h1 style={{margin:'30px'}}>Your Recent favourite workout is <span style={{color:'#ff8600',fontSize:"3.5rem"}}>{recentSearch}.</span></h1>
-          {/* <h2 className="hhh">{recentSearch}</h2> */}
+          {recentSearch && (
+            <div>
+              <h1 style={{margin:'30px'}}>Your recent favourite workout is <span style={{color:'#ff8600',fontSize:"3.0rem"}}>{recentSearch}.</span></h1>
+            </div>
+          )}
+          <Link to="/Exercise" className="linku">Go To Workout Page</Link>
         </div>
-      )}
-   
-      <Link to="/Exercise" className="linku">Go To Workout Page</Link>
-    </div>
-
-
-      
     </div>
   );
 }
 
 export default Home;
+  

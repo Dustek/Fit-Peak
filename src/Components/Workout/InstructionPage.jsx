@@ -53,17 +53,17 @@ const InstructionPage = () => {
 
   const videoPaths = {
     'Rickshaw Carry': '/beg1.mp4',
-    'Single-Leg Press': '/Single-Leg Press.mp4',
-    'Clean from Blocks': '/block.mp4',
-    'Incline Hammer Curls ': '/hammercurl.mp4',
-    'Barbell deficit deadlift': '/barbell.mp4',
-    'Romanian Deadlift With Dumbbells': '/dumbell.mp4',
-    'Clean Deadlift': '/barbell.mp4',
-    'Landmine twist': '/bb.mp4',
-    'Weighted pull-up': '/bb.mp4',
+    'Single-Leg Press': '/beg1.mp4',
+    'Clean from Blocks': '/beg1.mp4',
+    'Incline Hammer Curls ': '/beg1.mp4',
+    'Barbell deficit deadlift': '/beg1.mp4',
+    'Romanian Deadlift With Dumbbells': '/beg1.mp4',
+    'Clean Deadlift': '/beg1.mp4',
+    'Landmine twist': '/beg1.mp4',
+    'Weighted pull-up': '/beg1.mp4',
     'Power snatch-': '/beg1.mp4',
-    'Narrow-stance squat': '/squat.mp4',
-    'Barbell forward lunge': '/barbell.mp4.mp4',
+    'Narrow-stance squat': '/beg1.mp4',
+    'Barbell forward lunge': '/beg1.mp4',
     // Add more exercise names and corresponding video file paths as needed
   };
 
@@ -85,22 +85,25 @@ const InstructionPage = () => {
           </p>
           <p>Difficulty: {exercise.difficulty}</p>
           <div className="video-container">
-            <video width="560" height="315" controls>
+            <video width="560" height="315" controls className='video'>
               <source src={videoPaths[exercise.name]} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
           <div className="instructions">
             <h3>Instructions:</h3>
+            <div className='dis'>
             <p>
               {showFullInstructions ? exercise.instructions : `${exercise.instructions.slice(0, 500)}...`}
+              
               {!showFullInstructions && (
-                <button className="read-more-button" onClick={toggleInstructions}>Show more</button>
+                <button className="read-more-button ins" onClick={toggleInstructions}>Show more</button>
               )}
               {showFullInstructions && (
-                <button className="less-button" onClick={toggleInstructions}>Show less</button>
+                <button className="less-button ins" onClick={toggleInstructions}>Show less</button>
               )}
             </p>
+            </div>
           </div>
           <Link to="/" className="back-button">Back to Main Page</Link>
         </div>
